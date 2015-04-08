@@ -1,7 +1,10 @@
 OBJETOS = HolaPiñata.o holafuncion.o
-FUENTES = $(HOME)/../../run/media/wozgeass/f19cb489-882a-4d32-af0a-89154fe93471/home/wozgeass/Repos/MakeFile/Makefiles/Ejemplo4/*.c
+
+FUENTES = HolaPiñata.c holafuncion.c
 
 CFLAGS = -g -Wall -O3
+
+.PHONY: limpiar imprimir
 
 all: enlazar compilar
 
@@ -10,3 +13,10 @@ enlazar: ${FUENTES}
 
 compilar: ${OBJETOS}
 	${CC} ${CFLAGS} -o hola ${OBJETOS}
+
+limpiar:
+	rm -f hola ${OBJETOS}
+
+imprimir: HolaPiñata.c
+	cat $?
+	touch imprimir

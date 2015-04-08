@@ -6,5 +6,6 @@ all: enlazar compilar
 enlazar: ${FUENTES}
 	gcc -c ${FUENTES}
 
-compilar: ${OBJETOS}
-	gcc -o hola ${FUENTES}
+compilar: ${OBJECTOS}
+	gcc -o hola ${OBJECTOS}
+
